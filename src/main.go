@@ -2,7 +2,7 @@ package main
 
 import (
 	//"github.com/maximorero14/golang-api-test/models"
-	"github.com/maximorero14/golang-api-test/services"
+	"github.com/maximorero14/golang-api-test/src/services"
 	"github.com/gin-gonic/gin"
 )
 
@@ -20,5 +20,5 @@ func main() {
 	r.DELETE("/books/:id", services.DeleteBook)
 
 	// Run the server
-	r.Run()
+	r.Run(":8081")
 }

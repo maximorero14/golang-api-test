@@ -3,7 +3,7 @@ package services
 import (
 	"net/http"
 	"github.com/gin-gonic/gin"
-	"github.com/maximorero14/golang-api-test/models"
+	"github.com/maximorero14/golang-api-test/src/models"
 )
 
 type CreateBookInput struct {
