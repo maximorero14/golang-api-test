@@ -2,8 +2,8 @@ package main
 
 import (
 	//"github.com/maximorero14/golang-api-test/models"
-	"github.com/maximorero14/golang-api-test/src/services"
 	"github.com/gin-gonic/gin"
+	"github.com/maximorero14/golang-api-test/src/services"
 )
 
 func main() {
@@ -13,11 +13,11 @@ func main() {
 	//models.ConnectDatabase()
 
 	// Routes
-	r.GET("/books", services.FindBooks)
-	r.GET("/books/:id", services.FindBook)
-	r.POST("/books", services.CreateBook)
-	r.PATCH("/books/:id", services.UpdateBook)
-	r.DELETE("/books/:id", services.DeleteBook)
+	r.GET("/activity", services.FindActivities)
+	r.GET("/activity/:id", services.FindActivity)
+	r.POST("/activity", services.CreateActivity)
+	r.PATCH("/activity/:id", services.UpdateActivity)
+	r.DELETE("/activity/:id", services.DeleteActivity)
 
 	// Run the server
 	r.Run(":8081")
