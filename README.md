@@ -34,7 +34,7 @@ chkconfig docker on
 aws ecr describe-repositories --region us-east-1
 
 eval $(aws ecr get-login --no-include-email  | sed 's|https://||')
-docker pull 263497198111.dkr.ecr.us-east-1.amazonaws.com/golang-api-test:1.4
+docker pull 263497198111.dkr.ecr.us-east-1.amazonaws.com/golang-api-test:1.5
 
 docker images
 docker run -p 80:8081 -it d543361950e2
