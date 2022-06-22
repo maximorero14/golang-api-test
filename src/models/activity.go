@@ -1,7 +1,7 @@
 package models
 
 type Activity struct {
-	ID     string //pk
+	Id     string //pk
 	Type   string //sk
 	UserId string
 }

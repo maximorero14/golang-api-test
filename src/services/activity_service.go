@@ -1,6 +1,7 @@
 package services
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -38,7 +39,9 @@ func FindActivity(c *gin.Context) {
 		return
 	}*/
 
-	c.JSON(http.StatusOK, gin.H{"ID": activity.ID, "Type": activity.Type, "UserId": activity.UserId})
+	fmt.Printf("response activity.Id %s", activity.Id)
+
+	c.JSON(http.StatusOK, gin.H{"ID": activity.Id, "Type": activity.Type, "UserId": activity.UserId})
 }
 
 // POST /books

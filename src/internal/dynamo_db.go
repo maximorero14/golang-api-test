@@ -25,7 +25,7 @@ func GetItem(id string) (activity models.Activity, err error) {
 	var tableName = "merchands_activities"
 	result, err := dynamo.GetItem(&dynamodb.GetItemInput{
 		Key: map[string]*dynamodb.AttributeValue{
-			"ID": {
+			"id": {
 				N: aws.String(id),
 			},
 		},
