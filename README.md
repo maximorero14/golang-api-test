@@ -11,7 +11,7 @@ https://medium.com/appgambit/part-1-running-docker-on-aws-ec2-cbcf0ec7c3f8
 ### Comandos utiles
 docker build -t golang-api-test .
 
-docker run -p 80:8081 -it golang-api-test 
+docker run -p 80:8081 -it golang-api-test
 
 
 chmod 0400 ec2GolangTest.pem
@@ -31,10 +31,12 @@ service docker start
 usermod -a -G docker ec2-user
 chkconfig docker on
 
-aws ecr describe-repositories--region us-east-1
+aws ecr describe-repositories --region us-east-1
 
-eval $(aws ecr get-login --no-include-email | sed 's|https://||')
-docker pull 263497198111.dkr.ecr.us-east-1.amazonaws.com/golang-api-test:1.3
+eval $(aws ecr get-login --no-include-email  | sed 's|https://||')
+docker pull 263497198111.dkr.ecr.us-east-1.amazonaws.com/golang-api-test:1.4
 
+docker images
+docker run -p 80:8081 -it d543361950e2
 
 aws dynamodb scan --table-name merchands_activities --region us-east-1

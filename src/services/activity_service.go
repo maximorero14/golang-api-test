@@ -17,6 +17,17 @@ func FindActivities(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"data": books})
 }
 
+func Ping(c *gin.Context) {
+	// Get model if exist
+
+	/*if err := models.DB.Where("id = ?", c.Param("id")).First(&book).Error; err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Record not found!"})
+		return
+	}*/
+
+	c.JSON(http.StatusOK, "pong")
+}
+
 // GET /books/:id
 // Find a book
 func FindActivity(c *gin.Context) {

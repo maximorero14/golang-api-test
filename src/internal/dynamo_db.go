@@ -13,7 +13,7 @@ import (
 var dynamo *dynamodb.DynamoDB
 
 // connectDynamo returns a dynamoDB client
-func connectDynamo() (db *dynamodb.DynamoDB) {
+func ConnectDynamo() (db *dynamodb.DynamoDB) {
 	var region = "us-east-1"
 	return dynamodb.New(session.Must(session.NewSession(&aws.Config{
 		Region: &region,

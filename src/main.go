@@ -3,6 +3,7 @@ package main
 import (
 	//"github.com/maximorero14/golang-api-test/models"
 	"github.com/gin-gonic/gin"
+	"github.com/maximorero14/golang-api-test/src/internal"
 	"github.com/maximorero14/golang-api-test/src/services"
 )
 
@@ -11,8 +12,10 @@ func main() {
 
 	// Connect to database
 	//models.ConnectDatabase()
+	internal.ConnectDynamo()
 
 	// Routes
+	r.GET("/ping", services.Ping)
 	r.GET("/activity", services.FindActivities)
 	r.GET("/activity/:id", services.FindActivity)
 	r.POST("/activity", services.CreateActivity)
