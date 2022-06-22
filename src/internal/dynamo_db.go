@@ -21,6 +21,7 @@ func ConnectDynamo() (db *dynamodb.DynamoDB) {
 }
 
 func GetItem(id string) (activity models.Activity, err error) {
+	dynamo = ConnectDynamo()
 	var tableName = "merchands_activities"
 	result, err := dynamo.GetItem(&dynamodb.GetItemInput{
 		Key: map[string]*dynamodb.AttributeValue{
