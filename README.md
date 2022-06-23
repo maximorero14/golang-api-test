@@ -11,7 +11,7 @@ https://medium.com/appgambit/part-1-running-docker-on-aws-ec2-cbcf0ec7c3f8
 ### Comandos utiles
 docker build -t golang-api-test .
 
-docker run -p 80:8081 -it golang-api-test
+docker run -p 8080:8080 -it golang-api-test
 
 
 chmod 0400 ec2GolangTest.pem

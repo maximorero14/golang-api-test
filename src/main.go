@@ -21,5 +21,5 @@ func main() {
 	r.DELETE("/activity/:id", services.DeleteActivity)
 
 	// Run the server
-	r.Run(":8080")
+	r.Run(":80")
 }
